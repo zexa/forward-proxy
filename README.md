@@ -1,8 +1,8 @@
 # Rust Forward Proxy
 
-A high-performance forward proxy implementation in Rust that automatically handles authentication for upstream proxies (i.e. oxylabs).
+[![Rust](https://github.com/zexa/forward-proxy/actions/workflows/rust.yml/badge.svg)](https://github.com/zexa/forward-proxy/actions/workflows/rust.yml)
 
-Useful if you want to use geckodriver (firefox) instead of chrome with authenticated proxies.
+A high-performance forward proxy implementation in Rust that automatically handles authentication for upstream proxies (i.e. oxylabs).
 
 ## Usage
 
