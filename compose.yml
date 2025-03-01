@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # Forward proxy that handles authentication for any upstream proxy
+  forward-proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - LOCAL_HOST=0.0.0.0
+      - LOCAL_PORT=8118
+      # Configure these to point to your authenticated proxy
+      - PROXY_HOST=your-proxy-host
+      - PROXY_PORT=3128
+      - PROXY_USER=your-username
+      - PROXY_PASSWORD=your-password
+    ports:
+      - "8118:8118"
+    restart: unless-stopped
+    # Uncomment for production
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '0.5'
+    #       memory: 256M
