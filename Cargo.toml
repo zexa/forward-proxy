@@ -4,6 +4,11 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Proxy Authentication Docker Test"]
 description = "A forward proxy that handles authentication for upstream proxies"
+license = "MIT"
+repository = "https://github.com/zexa/forward-proxy"
+readme = "README.md"
+keywords = ["proxy", "authentication", "selenium", "webdriver", "geckodriver"]
+categories = ["network-programming", "web-programming::http-client", "authentication", "web-programming"]
 
 # Declare both a binary and a library
 [[bin]]

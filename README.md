@@ -4,6 +4,19 @@
 
 A high-performance forward proxy implementation in Rust that automatically handles authentication for upstream proxies (i.e. oxylabs).
 
+## Background
+
+This project addresses a long-standing issue with browser automation and authenticated proxies:
+
+- **Mozilla Bug**: This issue is tracked in [Mozilla Bug #1395886](https://bugzilla.mozilla.org/show_bug.cgi?id=1395886) - GeckoDriver doesn't support authenticated proxies.
+- **No W3C Standard**: There is currently no W3C standard for proxy authentication in WebDriver, leaving each browser implementation to handle it differently.
+- **Browser Differences**: 
+  - GeckoDriver (Firefox) does not support authenticated proxies at all
+  - ChromeDriver implemented their own solution without waiting for a standard
+  - Services like Oxylabs require authentication
+
+This forward proxy bridges the gap by sitting between your automation tools and authenticated proxies, handling the authentication for you transparently.
+
 ## Usage
 
 ### Build the proxy
